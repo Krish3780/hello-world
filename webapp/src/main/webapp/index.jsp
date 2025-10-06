@@ -20,7 +20,7 @@
     <input type="text" placeholder="Enter address" name="address" id="address" required>
     <br>
 
-    <label for="psw"><b>Password</b></label>
+    <label for="psw"><b>New Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
     <br>
 
