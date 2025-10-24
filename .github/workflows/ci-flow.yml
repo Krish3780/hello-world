@@ -11,6 +11,7 @@ jobs:
           ls -l
           pwd
   build:
+    needs: fetch-code
     runs-on: ubuntu-latest
     steps:
       - name: check out the code
@@ -37,5 +38,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: . # Path to your Dockerfile and build context
+          push: true # Push the image to Docker Hub
+          tags: ${{ secrets.DOCKER_USERNAME }}/krishna3780/github-actions-repo:latest    
 
 
