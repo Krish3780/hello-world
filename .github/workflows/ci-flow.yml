@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: get the code from repo
         uses: actions/checkout@v5
+      - name: list the files    
         run: |
           ls -l
           pwd
