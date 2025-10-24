@@ -48,7 +48,7 @@ jobs:
       - name: Build and push Docker image manually
         run: |
           docker version
-          docker build -t krishna3780/github-actions-repo .
+          docker build -t krishna3780/github-actions-repo:v1 .
           docker push krishna3780/github-actions-repo:v1
           
 
