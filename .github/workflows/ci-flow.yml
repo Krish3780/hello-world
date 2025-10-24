@@ -21,3 +21,6 @@ jobs:
           mvn --version  
       - name: build the code
         run:  mvn clean package  
+      - name: list files
+        run: |
+          ls -l  
