@@ -10,3 +10,14 @@ jobs:
         run: |
           ls -l
           pwd
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out the code
+        uses: actions/checkout@v5
+      - name: check java and maven version
+        run: |
+          java -version
+          mvn --version  
+      - name: build the code
+        run:  mvn clean package  
