@@ -44,12 +44,12 @@ jobs:
         with:
           context: . # Path to your Dockerfile and build context
           push: true # Push the image to Docker Hub
-          tags: ${{ secrets.DOCKER_USERNAME }}/krishna3780/github-actions-repo:latest
-      - name: Build and push Docker image manually
-        run: |
-          docker version
-          docker build -t krishna3780/github-actions-repo .
-          docker push krishna3780/github-actions-repo:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/krishna3780/github-actions-repo:v1
+      # - name: Build and push Docker image manually
+      #   run: |
+      #     docker version
+      #     docker build -t krishna3780/github-actions-repo .
+      #     docker push krishna3780/github-actions-repo:latest
           
 
 
