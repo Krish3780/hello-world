@@ -1,0 +1,11 @@
+name: CI deployment
+on: push
+jobs:
+  fetch-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get the code from repo
+        uses: actions/checkout@v5
+        run: |
+          ls -l
+          pwd
